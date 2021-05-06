@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import {foxSingleMixin} from './../fox/index'
+// import {foxSingleMixin} from './../fox/index'
 
 export default {
   name: 'Home',
   data() {
     return {
-      a: 'test'
+      a: '2'
     }
   },
 
@@ -19,33 +19,22 @@ export default {
   },
 
   methods: {
-
     onCreate() {
       console.log("onCreate");
     },
-
     onStart() {
       console.log("onStart");
     },
+    onResume() {
 
-    onBeforeUpdate() {
-      console.log("onBeforeUpdate");
     },
-
-    onUpdated() {
-      console.log("onUpdated");
-    },
-
     onStop() {
       console.log("onStop");
     },
-
     onDestroy() {
       console.log("onDestroy");
     }
-
   },
-
-  mixins: [foxSingleMixin]
+  // mixins: [foxSingleMixin]
 }
 </script>
