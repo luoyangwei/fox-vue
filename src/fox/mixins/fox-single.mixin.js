@@ -1,3 +1,5 @@
+import ws from "@/fox/ws/websocket";
+
 /**
  * 定义好了基本的生命周期狗子
  * onCreate: 在页面元素创建的时候调
@@ -13,7 +15,7 @@ const foxSingleMixin = {
      * 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
      */
     beforeCreate() {
-        this.onCreate();
+        ws.init();
     },
 
     /**
@@ -21,7 +23,7 @@ const foxSingleMixin = {
      * 和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el property 目前尚不可用。
      */
     created() {
-        this.onStop();
+        this.onCreate();
     },
 
     beforeMount() {
